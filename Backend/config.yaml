@@ -1,0 +1,50 @@
+exit_code:
+  success: 0
+  insufficient_stock_cart: 100
+  product_not_found_cart: 101
+  product_not_in_cart: 102
+  address_name_exists: 103
+  insufficient_stock_request: 200
+  request_not_found: 201
+  no_product_cart_donate_bag: 202
+  invalid_request_status_change: 203
+  invalid_request_for_remake: 204
+  volunteer_offline: 205
+  unverified_info: 206
+  order_product_not_distributed: 207
+  invalid_available_start_end_date: 208
+  invalid_available_date_earliest_expired_food: 209
+  volunteer_assigned: 210
+  invalid_volunteer_receiving: 211
+  category_name_exists: 300
+  category_name_not_exists: 301
+  unauthorized: 401
+  wrong_credentials: 402
+  locked_account: 403
+  unverified_email: 404
+  email_exists: 405
+  wrong_old_password: 406
+  not_waiting_for_approval: 407
+  invalid_field: 501
+  internal_error: 500
+  product_not_found: 600
+  invalid_report_user: 700
+  invalid_report_request: 701
+  category_not_found: 800
+  category_not_deletable: 801
+  bad_request: 400
+db_const:
+  num_days_chart: 7
+  num_months_chart: 6
+  almost_expired_days: 7
+  remain_stock: 50
+  new_day: 150
+  warehouse_address: 2 - 4 Đ. Hồng Hà, Phường 2, Tân Bình, Thành phố Hồ Chí Minh, Việt Nam
+  warehouse_lat: 10.781140
+  warehouse_long: 106.597240
+
+be_const:
+  domain: dev.bachkhoi.online
+ux_const:
+  default_limit: 20
+  default_offset: 0
