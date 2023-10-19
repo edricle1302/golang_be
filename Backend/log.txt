@@ -24,3 +24,176 @@
 2023/10/10 18:41:56 mongo: no documents in result
 2023/10/10 18:43:10 [+] Starting...
 2023/10/10 18:43:13 mongo: no documents in result
+2023/10/13 14:59:13 [+] Starting...
+2023/10/13 14:59:48 open ../Data/user2@yopmail.com_avatar: The system cannot find the path specified.
+2023/10/13 14:59:48 open ../Data/user2@yopmail.com_avatar: The system cannot find the path specified.
+2023/10/13 14:59:48 Cannot write file of avatar
+2023/10/13 15:35:59 [+] Starting...
+2023/10/13 15:36:02 http: panic serving 127.0.0.1:53452: assignment to entry in nil map
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1854 +0xbf
+panic({0xdf8660, 0x10fed70})
+	C:/Program Files/Go/src/runtime/panic.go:890 +0x263
+messenger/MongoDB.Create_account(0xc0000f9228?, 0xc0000f9370?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/MongoDB/mongodb.go:79 +0xd6
+main.HandleSignup({0x11051e0?, 0xc0000981c0}, 0xec99cd?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:255 +0x1a9c
+main.RequestLogger.func1({0x11051e0, 0xc0000981c0}, 0xc00038e100)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:768 +0x122
+net/http.HandlerFunc.ServeHTTP(0xc0000981c0?, {0x11051e0?, 0xc0000981c0?}, 0xf07b7c?)
+	C:/Program Files/Go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x11051e0, 0xc0000981c0}, 0xc00038e100)
+	C:/Program Files/Go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0x11038a8?}, {0x11051e0, 0xc0000981c0}, 0xc00038e100)
+	C:/Program Files/Go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00015a480, {0x1105838, 0xc0000450b0})
+	C:/Program Files/Go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
+2023/10/13 15:36:41 http: panic serving 127.0.0.1:53475: assignment to entry in nil map
+goroutine 33 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1854 +0xbf
+panic({0xdf8660, 0x10fed70})
+	C:/Program Files/Go/src/runtime/panic.go:890 +0x263
+messenger/MongoDB.Create_account(0xc000775228?, 0xc000775370?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/MongoDB/mongodb.go:79 +0xd6
+main.HandleSignup({0x11051e0?, 0xc000098460}, 0xec99cd?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:255 +0x1a9c
+main.RequestLogger.func1({0x11051e0, 0xc000098460}, 0xc00038e300)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:768 +0x122
+net/http.HandlerFunc.ServeHTTP(0xc000098460?, {0x11051e0?, 0xc000098460?}, 0xed059b?)
+	C:/Program Files/Go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x11051e0, 0xc000098460}, 0xc00038e300)
+	C:/Program Files/Go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0x11038a8?}, {0x11051e0, 0xc000098460}, 0xc00038e300)
+	C:/Program Files/Go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00015a7e0, {0x1105838, 0xc0000450b0})
+	C:/Program Files/Go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
+2023/10/13 15:37:47 [+] Starting...
+2023/10/13 15:37:49 http: panic serving 127.0.0.1:53488: assignment to entry in nil map
+goroutine 12 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1854 +0xbf
+panic({0x1588660, 0x188ede0})
+	C:/Program Files/Go/src/runtime/panic.go:890 +0x263
+messenger/MongoDB.Create_account(0xc000117228?, 0xc000117370?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/MongoDB/mongodb.go:79 +0xd6
+main.HandleSignup({0x1895260?, 0xc0003221c0}, 0x16599cd?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:255 +0x1a9c
+main.RequestLogger.func1({0x1895260, 0xc0003221c0}, 0xc000282200)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:768 +0x122
+net/http.HandlerFunc.ServeHTTP(0xc0003221c0?, {0x1895260?, 0xc0003221c0?}, 0x168b334?)
+	C:/Program Files/Go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1895260, 0xc0003221c0}, 0xc000282200)
+	C:/Program Files/Go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0x1893928?}, {0x1895260, 0xc0003221c0}, 0xc000282200)
+	C:/Program Files/Go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc0002a4090, {0x18958b8, 0xc00012a270})
+	C:/Program Files/Go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
+2023/10/13 15:40:08 [+] Starting...
+2023/10/13 15:40:14 http: panic serving 127.0.0.1:53522: assignment to entry in nil map
+goroutine 40 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1854 +0xbf
+panic({0xa38660, 0xd3ede0})
+	C:/Program Files/Go/src/runtime/panic.go:890 +0x263
+messenger/MongoDB.Create_account(0xc000117228?, 0xc00016d080)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/MongoDB/mongodb.go:79 +0x119
+main.HandleSignup({0xd45260?, 0xc0003901c0}, 0xb099cd?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:255 +0x1a9c
+main.RequestLogger.func1({0xd45260, 0xc0003901c0}, 0xc0003ba100)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:768 +0x122
+net/http.HandlerFunc.ServeHTTP(0xc0003901c0?, {0xd45260?, 0xc0003901c0?}, 0xb1059b?)
+	C:/Program Files/Go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xd45260, 0xc0003901c0}, 0xc0003ba100)
+	C:/Program Files/Go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xd43928?}, {0xd45260, 0xc0003901c0}, 0xc0003ba100)
+	C:/Program Files/Go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00015a480, {0xd458b8, 0xc000044a50})
+	C:/Program Files/Go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
+2023/10/13 15:44:31 [+] Starting...
+2023/10/13 15:44:32 http: panic serving 127.0.0.1:53557: assignment to entry in nil map
+goroutine 24 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1854 +0xbf
+panic({0x808660, 0xb0ede0})
+	C:/Program Files/Go/src/runtime/panic.go:890 +0x263
+messenger/MongoDB.Create_account(0xc0000cf228?, 0xc0000cf370?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/MongoDB/mongodb.go:79 +0x15d
+main.HandleSignup({0xb15260?, 0xc0003a01c0}, 0x8d99cd?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:255 +0x1a9c
+main.RequestLogger.func1({0xb15260, 0xc0003a01c0}, 0xc0002fc100)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:768 +0x122
+net/http.HandlerFunc.ServeHTTP(0xc0003a01c0?, {0xb15260?, 0xc0003a01c0?}, 0x8f3c25?)
+	C:/Program Files/Go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xb15260, 0xc0003a01c0}, 0xc0002fc100)
+	C:/Program Files/Go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xb13928?}, {0xb15260, 0xc0003a01c0}, 0xc0002fc100)
+	C:/Program Files/Go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00015a480, {0xb158b8, 0xc0001d5b90})
+	C:/Program Files/Go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
+2023/10/13 15:46:18 [+] Starting...
+2023/10/13 16:14:23 [+] Starting...
+2023/10/13 16:14:30 http: panic serving 127.0.0.1:53942: interface conversion: interface {} is string, not *[]uint8
+goroutine 39 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1854 +0xbf
+panic({0xc01ea0, 0xc00016d6b0})
+	C:/Program Files/Go/src/runtime/panic.go:890 +0x263
+messenger/MongoDB.Create_account(0xc000117228?, 0xc000117370?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/MongoDB/mongodb.go:79 +0x21c
+main.HandleSignup({0xf07b20?, 0xc0006b00e0}, 0xccbf71?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:255 +0x1a9c
+main.RequestLogger.func1({0xf07b20, 0xc0006b00e0}, 0xc0002fc100)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:768 +0x122
+net/http.HandlerFunc.ServeHTTP(0xc0006b00e0?, {0xf07b20?, 0xc0006b00e0?}, 0xce61c9?)
+	C:/Program Files/Go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xf07b20, 0xc0006b00e0}, 0xc0002fc100)
+	C:/Program Files/Go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0xf061e8?}, {0xf07b20, 0xc0006b00e0}, 0xc0002fc100)
+	C:/Program Files/Go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00015a480, {0xf08178, 0xc000044990})
+	C:/Program Files/Go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
+2023/10/13 16:16:02 [+] Starting...
+2023/10/13 16:16:04 http: panic serving 127.0.0.1:53955: interface conversion: interface {} is string, not []uint8
+goroutine 39 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1854 +0xbf
+panic({0xfc1ea0, 0xc00021e120})
+	C:/Program Files/Go/src/runtime/panic.go:890 +0x263
+messenger/MongoDB.Create_account(0xc0001f3228?, 0xc0001f3370?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/MongoDB/mongodb.go:79 +0x21c
+main.HandleSignup({0x12c7b20?, 0xc00009e1c0}, 0x108bf71?)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:255 +0x1a9c
+main.RequestLogger.func1({0x12c7b20, 0xc00009e1c0}, 0xc00037e300)
+	C:/Users/Administrator/Documents/GitHub/golang_be/Backend/main.go:768 +0x122
+net/http.HandlerFunc.ServeHTTP(0xc00009e1c0?, {0x12c7b20?, 0xc00009e1c0?}, 0x10a61c9?)
+	C:/Program Files/Go/src/net/http/server.go:2122 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x12c7b20, 0xc00009e1c0}, 0xc00037e300)
+	C:/Program Files/Go/src/net/http/server.go:2500 +0x149
+net/http.serverHandler.ServeHTTP({0x12c61e8?}, {0x12c7b20, 0xc00009e1c0}, 0xc00037e300)
+	C:/Program Files/Go/src/net/http/server.go:2936 +0x316
+net/http.(*conn).serve(0xc00015a480, {0x12c8178, 0xc0001d5c50})
+	C:/Program Files/Go/src/net/http/server.go:1995 +0x612
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3089 +0x5ed
+2023/10/13 16:21:50 [+] Starting...
+2023/10/13 16:23:16 [+] Starting...
+2023/10/13 16:28:22 [+] Starting...
+2023/10/13 16:29:47 [+] Starting...
+2023/10/13 16:30:54 [+] Starting...
+2023/10/13 16:31:45 [+] Starting...
+2023/10/13 16:33:10 [+] Starting...
+2023/10/13 16:57:29 [+] Starting...

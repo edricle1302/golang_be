@@ -230,7 +230,7 @@ func HandleImageRelatedFields(bodyStruct *map[string]interface{}, fields []strin
 			log.Println("Field " + field + " is empty")
 			return errors.New("Field " + field + " is empty")
 		}
-		err := DecodeBase64AndWriteFile((*bodyStruct)[field].(string), "../Data/"+fileName+"_"+field)
+		err := DecodeBase64AndWriteFile((*bodyStruct)[field].(string), "./Data/"+fileName+"_"+field)
 		if err != nil {
 			log.Println(err)
 			log.Println("Cannot write file of " + field)

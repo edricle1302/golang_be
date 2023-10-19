@@ -8,6 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type Account struct {
@@ -49,31 +50,6 @@ func Init_database(host string, port string, database string) *mongo.Database {
 	// Get a handle for your collection
 	db := client.Database(database)
 	return db
-	// // Some dummy data to add to the Database
-	// john := User{"John", 20, "johndoe@test.com"}
-	// maria := User{"Maria", 10, "maria@test.com"}
-	// brock := User{"Brock", 15, "brock@example.com"}
-
-	// // Insert a single document
-	// insertUser(collection, john)
-
-	// // Insert multiple documents
-	// users := []interface{}{maria, brock}
-	// insertMultipleUsers(collection, users)
-
-	// // Update a document
-	// updateUser(collection, maria, "John")
-
-	// // Find a single document
-	// findUser(collection, "Maria")
-
-	// // Finding multiple documents
-	// findAllUsers(collection)
-
-	// Delete all the documents in the collection
-	// deleteAllUsers(collection)
-
-	// Close the connection once no longer needed
 }
 
 func Get_account(db *mongo.Database, email string) (map[string]interface{}, error) {
@@ -83,6 +59,9 @@ func Get_account(db *mongo.Database, email string) (map[string]interface{}, erro
 	collection := db.Collection("account")
 	err := collection.FindOne(context.TODO(), filter).Decode(&result)
 	if err != nil {
+		if err == mongo.ErrNoDocuments {
+			return nil, nil
+		}
 		log.Println(err)
 		return nil, err
 	}
@@ -90,6 +69,28 @@ func Get_account(db *mongo.Database, email string) (map[string]interface{}, erro
 	fmt.Printf("Found a single document: %+v\n", result)
 
 	return result, nil
+}
+
+// Insert a document into the database
+func Create_account(db *mongo.Database, account map[string]interface{}) error {
+	collection := db.Collection("account")
+	new_account := account
+	// hash password
+	password := []byte(new_account["password"].(string))
+	hash_password, err := bcrypt.GenerateFromPassword(password, 10)
+	if err != nil {
+		log.Println(err)
+		return err
+	}
+	new_account["password"] = hash_password
+	// save account
+	insertResult, err := collection.InsertOne(context.TODO(), new_account)
+	if err != nil {
+		log.Println(err)
+		return err
+	}
+	fmt.Println(insertResult)
+	return nil
 }
 
 // Insert a document into the database
